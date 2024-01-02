@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/myProductivity/static/css/main.b96c72ef.css",
+    "main.js": "/myProductivity/static/js/main.1a81ecac.js",
+    "static/js/787.62955225.chunk.js": "/myProductivity/static/js/787.62955225.chunk.js",
+    "index.html": "/myProductivity/index.html",
+    "main.b96c72ef.css.map": "/myProductivity/static/css/main.b96c72ef.css.map",
+    "main.1a81ecac.js.map": "/myProductivity/static/js/main.1a81ecac.js.map",
+    "787.62955225.chunk.js.map": "/myProductivity/static/js/787.62955225.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b96c72ef.css",
+    "static/js/main.1a81ecac.js"
+  ]
+}
