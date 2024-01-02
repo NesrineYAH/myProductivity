@@ -10,10 +10,10 @@ export const projectsData = [
       { id: 2, title: "excRedux", completed: false },
       { id: 3, title: "installer les package", completed: false },
     ],
-    undertasks:[
+    undertasks: [
       { id: 1, title: " soustache1", completed: false },
       { id: 1, title: " soustache2", completed: false },
-    ]
+    ],
   },
   // ... autres projets //      <Line value={progress} max="100" />
   {

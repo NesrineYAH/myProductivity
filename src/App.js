@@ -25,15 +25,12 @@ const App = () => {
     const completedTasks = projectsData.reduce((acc, project) => {
       return acc + project.tasks.filter((task) => task.completed).length;
     }, 0);
-
     return (completedTasks / totalTasks) * 100;
   };
   const progress = calculateProgress();
-
   const { id } = useParams();
   const [error, setError] = useState(false);
   const [projects, setProjects] = useState(projectsData);
-
   const handleTaskToggle = (projectId, taskId) => {
     setProjects((prevProjects) =>
       prevProjects.map((project) => {
@@ -55,8 +52,21 @@ const App = () => {
   console.log(projects);
   console.log(projects.tasks);
 
+  const [currentDate, setCurrentDate] = useState(new Date());
+  useEffect(() => {
+    // Update the date every second
+    const intervalId = setInterval(() => {
+      setCurrentDate(new Date());
+    }, 1000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <section id="MeObje">
+      <h1>MY WOKFLOW PRODUCTIVITY 2024 </h1>
+      <div className="current-date">{currentDate.toLocaleString()}</div>
       <div className="project__Container">
         {projects.map((project) => (
           <div key={project.id}>
