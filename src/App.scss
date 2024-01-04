@@ -13,25 +13,6 @@
 
 }
 
-
-
-
-
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 #MeObje {
   width: 1400px;
   height: auto;
@@ -47,7 +28,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   //  border: 4px solid red;
   background-color: #edecef;
   background-position: center;
@@ -70,12 +51,11 @@ flex-wrap: wrap;
   border-radius: 4px solid navy;
   box-shadow: 0px 0px 25px 0 #583e81, 6px 6px 25px 0 rgba(129, 77, 188, 0.2);
   padding-right: 18px;
+  border-radius: 10px;
 
 }
 
-.progress>.Barre {
-  height: 30px;
-}
+
 
 .mes_Tasks {
   width: 93%;

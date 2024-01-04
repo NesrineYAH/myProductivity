@@ -1,5 +1,7 @@
 import React from "react";
 import NBY from "../../assets/images/NBY.png";
+//import original from "../../assets/images/original.png";
+
 import { useTypewriter, Cursor } from "react-simple-typewriter"; // Importer le composant correctement
 import "./Header.scss";
 
@@ -12,6 +14,7 @@ const Header = () => {
   });
   return (
     <div className="Header">
+      {/* <img src={original} alt="original" className="Original" /> */}
       <button className="navbarLogo">
         <img className="navbarLogo__img" src={NBY} alt="logo" />
       </button>

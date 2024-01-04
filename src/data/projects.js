@@ -1,10 +1,30 @@
 // data.js
 export const projectsData = [
   {
+    name: "mon portfolio ",
+    id: "1",
+    tasks: [
+      {
+        id: 1,
+        title: "Corriger CV",
+        completed: false,
+        startDate: "2024-01-08",
+        endDate: "2024-01-09",
+      },
+      {
+        id: 2,
+        title: "nom domain",
+        completed: false,
+        startDate: "2024-01-08",
+        endDate: "2024-01-09",
+      },
+    ],
+  },
+  {
     name: "Heéberger-moi ",
     image: "",
     alt: "projet HM",
-    id: "1",
+    id: "2",
     tasks: [
       {
         id: 1,
@@ -52,7 +72,7 @@ export const projectsData = [
     name: "Game on ",
     image: "",
     alt: "projet GO",
-    id: "2",
+    id: "3",
     tasks: [
       {
         id: 1,
@@ -74,7 +94,7 @@ export const projectsData = [
     name: "Banque 36 ",
     image: "",
     alt: "projet BK36",
-    id: "3",
+    id: "4",
     tasks: [
       {
         id: 1,
@@ -96,7 +116,7 @@ export const projectsData = [
     name: "CodinGame",
     image: "",
     alt: "projet codinGame",
-    id: "4",
+    id: "5",
     tasks: [
       {
         id: 1,
