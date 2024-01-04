@@ -1,6 +1,6 @@
 // ProjectProgress.js
 import React from "react";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../ProgressBar/ProgressBar";
 import Line from "react-progressbar";
 
 const ProjectProgress = ({ project }) => {

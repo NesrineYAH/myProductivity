@@ -6,9 +6,41 @@ export const projectsData = [
     alt: "projet HM",
     id: "1",
     tasks: [
-      { id: 1, title: "  Redux", completed: false },
-      { id: 2, title: "excRedux", completed: false },
-      { id: 3, title: "installer les package", completed: false },
+      {
+        id: 1,
+        title: "  Redux :",
+        completed: false,
+        startDate: "2024-01-01",
+        endDate: "2024-01-10",
+      },
+      {
+        id: 2,
+        title: "excRedux :",
+        completed: false,
+        startDate: "2024-01-05",
+        endDate: "2024-01-15",
+      },
+      {
+        id: 3,
+        title: "Document",
+        completed: false,
+        startDate: "2024-01-05",
+        endDate: "2024-01-15",
+      },
+      {
+        id: 4,
+        title: "Media Query",
+        completed: false,
+        startDate: "2024-02-11",
+        endDate: "2024-02-18",
+      },
+      {
+        id: 5,
+        title: "tr ",
+        completed: false,
+        startDate: "2024-02-13",
+        endDate: "2024-02-18",
+      },
     ],
     undertasks: [
       { id: 1, title: " soustache1", completed: false },
@@ -22,8 +54,20 @@ export const projectsData = [
     alt: "projet GO",
     id: "2",
     tasks: [
-      { id: 1, title: " Bootstrap", completed: false },
-      { id: 2, title: "excBootstrap", completed: false },
+      {
+        id: 1,
+        title: " Bootstrap",
+        completed: false,
+        startDate: "2024-01-07",
+        endDate: "2024-01-15",
+      },
+      {
+        id: 2,
+        title: "excBootstrap",
+        completed: false,
+        startDate: "2024-01-05",
+        endDate: "2024-01-12",
+      },
     ],
   },
   {
@@ -32,8 +76,42 @@ export const projectsData = [
     alt: "projet BK36",
     id: "3",
     tasks: [
-      { id: 1, title: " typeScript", completed: false },
-      { id: 2, title: "exctypeScript", completed: false },
+      {
+        id: 1,
+        title: " typeScript",
+        completed: false,
+        startDate: "2024-01-01",
+        endDate: "2024-01-17",
+      },
+      {
+        id: 2,
+        title: "exctypeScript",
+        completed: false,
+        startDate: "2024-01-10",
+        endDate: "2024-01-18",
+      },
+    ],
+  },
+  {
+    name: "CodinGame",
+    image: "",
+    alt: "projet codinGame",
+    id: "4",
+    tasks: [
+      {
+        id: 1,
+        title: "  Python :",
+        completed: false,
+        startDate: "2024-02-11",
+        endDate: "2024-02-18",
+      },
+      {
+        id: 2,
+        title: " excPython :",
+        completed: false,
+        startDate: "2024-02-01",
+        endDate: "2024-02-10",
+      },
     ],
   },
 ];
