@@ -1,30 +1,10 @@
 // data.js
 export const projectsData = [
   {
-    name: "mon portfolio ",
-    id: "1",
-    tasks: [
-      {
-        id: 1,
-        title: "Corriger CV",
-        completed: false,
-        startDate: "2024-01-08",
-        endDate: "2024-01-09",
-      },
-      {
-        id: 2,
-        title: "nom domain",
-        completed: false,
-        startDate: "2024-01-08",
-        endDate: "2024-01-09",
-      },
-    ],
-  },
-  {
-    name: "Heéberger-moi ",
+    name: "Héberger-moi ",
     image: "",
     alt: "projet HM",
-    id: "2",
+    id: "1",
     tasks: [
       {
         id: 1,
@@ -54,25 +34,14 @@ export const projectsData = [
         startDate: "2024-02-11",
         endDate: "2024-02-18",
       },
-      {
-        id: 5,
-        title: "tr ",
-        completed: false,
-        startDate: "2024-02-13",
-        endDate: "2024-02-18",
-      },
-    ],
-    undertasks: [
-      { id: 1, title: " soustache1", completed: false },
-      { id: 1, title: " soustache2", completed: false },
     ],
   },
-  // ... autres projets //      <Line value={progress} max="100" />
+
   {
     name: "Game on ",
     image: "",
     alt: "projet GO",
-    id: "3",
+    id: "2",
     tasks: [
       {
         id: 1,
@@ -94,7 +63,7 @@ export const projectsData = [
     name: "Banque 36 ",
     image: "",
     alt: "projet BK36",
-    id: "4",
+    id: "3",
     tasks: [
       {
         id: 1,
@@ -116,7 +85,7 @@ export const projectsData = [
     name: "CodinGame",
     image: "",
     alt: "projet codinGame",
-    id: "5",
+    id: "4",
     tasks: [
       {
         id: 1,
@@ -131,6 +100,28 @@ export const projectsData = [
         completed: false,
         startDate: "2024-02-01",
         endDate: "2024-02-10",
+      },
+    ],
+  },
+  {
+    name: "mon portfolio ",
+    image: "",
+    alt: "",
+    id: "5",
+    tasks: [
+      {
+        id: 1,
+        title: "Corriger CV",
+        completed: false,
+        startDate: "2024-01-08",
+        endDate: "2024-01-09",
+      },
+      {
+        id: 2,
+        title: "nom domain",
+        completed: false,
+        startDate: "2024-01-08",
+        endDate: "2024-01-09",
       },
     ],
   },

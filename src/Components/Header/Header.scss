@@ -9,8 +9,10 @@
     font-size: calc(10px + 2vmin);
     color: white;
 
-    .Original {
-        width: 100%;
+    &__list {
+        width: 10%;
+        color: #985ff5;
+        list-style-type: none;
 
     }
 
@@ -43,8 +45,9 @@
         display: flex;
         justify-content: center;
         overflow: hidden;
-        border-radius: 2px solid #433871;
-        //   background-color: #433871;
+        color: #985ff5;
+        //  border-radius: 2px solid #433871;
+        //  background-color: #433871;
         //  box-shadow: 0px 0px 0px 0 #583e81, 6px 6px 25px 0 rgba(0, 0, 0, .2);
         margin-bottom: 22px;
 

@@ -2,25 +2,25 @@
 import React, { useState } from "react";
 
 const Task = ({ task, onToggle }) => {
-  //   const [tasks, setTasks] = useState([
-  //     { id: 1, title: "Task 1", completed: false },
-  //     { id: 2, title: "Task 2", completed: true },
-  //     // Add more tasks as needed
-  //   ]);
-  //   const handleToggle = (taskId) => {
-  //     setTasks((prevTasks) =>
-  //       prevTasks.map((task) =>
-  //         task.id === taskId ? { ...task, completed: !task.completed } : task
-  //       )
-  //     );
-  //   };
+    const [tasks, setTasks] = useState([
+       { id: 1, title: "Task 1", completed: false },
+       { id: 2, title: "Task 2", completed: true },
+       // Add more tasks as needed
+     ]);
+     const handleToggle = (taskId) => {
+       setTasks((prevTasks) =>
+         prevTasks.map((task) =>
+           task.id === taskId ? { ...task, completed: !task.completed } : task
+         )
+       );
+     };
 
-  //   return (
-  //     <div>
-  //       <input type="checkbox" checked={task.completed} onToggle={handleToggle} />
-  //       <label>{task.title}</label>
-  //     </div>
-  //   );
+     return (
+       <div>
+         <input type="checkbox" checked={task.completed} onToggle={handleToggle} />
+         <label>{task.title}</label>
+      </div>
+     );
 
   const Task = ({ task, onTaskToggle }) => {
     return (

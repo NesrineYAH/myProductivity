@@ -6,6 +6,8 @@ import ProjectProgress from "./Components/ProjectProgress/ProjectProgress";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Home from "./pages/Home/Home";
+import Objectifs from "./pages/Objectifs/Objectifs";
+
 import "./App.scss";
 
 const Task = ({ task, onTaskToggle }) => {
@@ -91,7 +93,12 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Objectifs" element={<Objectifs />} />
+        </Routes>
+      </BrowserRouter>
       <div id="MeObje">
         <h1>MY WOKFLOW PRODUCTIVITY 2024 </h1>
         <div className="current-date">{currentDate.toLocaleString()}</div>
