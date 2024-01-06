@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import "./Objectifs.scss";
 
 const Objectifs = () => {
   const [objectifs, setObjectifs] = useState([
@@ -20,10 +21,10 @@ const Objectifs = () => {
   };
 
   return (
-    <div id="objectifs">
+    <div id="Objectifs">
       <ul>
         {objectifs.map((objectif) => (
-          <li className="ObjectifCard" key={objectif.id}>
+          <li className="Card" key={objectif.id}>
             <input
               type="checkbox"
               checked={objectif.completed}

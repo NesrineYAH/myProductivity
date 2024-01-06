@@ -6,9 +6,9 @@ import ProjectProgress from "./Components/ProjectProgress/ProjectProgress";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Home from "./pages/Home/Home";
-import Objectifs from "./pages/Objectifs/Objectifs";
-
+import Objectifs from "./Components/Objectifs/Objectifs";
 import "./App.scss";
+import MesOmbission from "./Components/Between/MesOmbission";
 
 const Task = ({ task, onTaskToggle }) => {
   return (
@@ -24,7 +24,8 @@ const Task = ({ task, onTaskToggle }) => {
 };
 
 const App = () => {
-  const calculateProgress = () => {
+  /* const calculateProgress = () => {
+  
     // Calculate progress based on completed tasks, for example
     const totalTasks = projectsData.reduce(
       (acc, project) => acc + project.tasks.length,
@@ -89,17 +90,18 @@ const App = () => {
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);
-
+*/
   return (
     <div className="App">
       <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Objectifs" element={<Objectifs />} />
+          <Route path={`../Objectifs/#Objectifs`} element={<Objectifs />} />
         </Routes>
-
-        <div id="MeOMB">
+      </BrowserRouter>
+      {/* 
+  <div id="MeOMB">
           <h1>MY WOKFLOW PRODUCTIVITY 2024 </h1>
           <div className="current-date">{currentDate.toLocaleString()}</div>
           <div className="project__Container">
@@ -116,8 +118,9 @@ const App = () => {
               </div>
             ))}
           </div>
-        </div>
-      </BrowserRouter>
+        </div> */}
+      <MesOmbission />
+      <Objectifs />
     </div>
   );
 };

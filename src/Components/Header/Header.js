@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import NBY from "../../assets/images/NBY.png";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useTypewriter, Cursor } from "react-simple-typewriter"; // Importer le composant correctement
 import "./Header.scss";
@@ -16,13 +16,7 @@ const Header = () => {
     <div className="Header">
       <nav>
         <ul>
-          <a
-            href={`../Objectifs/#objectifs`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            {/**{`../Objectifs/#Objectifs`} */}{" "}
+          <a href={`../Objectifs/#Objectifs`}>
             <li className="Header__list">Objectifs</li>
           </a>
           <a href="/">
@@ -35,8 +29,7 @@ const Header = () => {
       </button>
 
       <p className="Loisir">
-        {"love"} {""}
-        <span className="Loisir__text">{text}</span>
+        {"love"} {""} <span className="Loisir__text">{text}</span>
         <Cursor cursorColor="red" />
       </p>
     </div>

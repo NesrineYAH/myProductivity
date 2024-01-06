@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ProgressBar from "./Components/ProgressBar/ProgressBar";
 import { useParams } from "react-router-dom";
-import { projectsData } from "./data/projects";
-import ProjectProgress from "./Components/ProjectProgress/ProjectProgress";
-
+import ProgressBar from "../ProgressBar/ProgressBar";
+import ProjectProgress from "../ProjectProgress/ProjectProgress";
+import { projectsData } from "../../data/projects";
 
 
 const Task = ({ task, onTaskToggle }) => {
