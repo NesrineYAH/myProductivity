@@ -22,6 +22,7 @@ const Objectifs = () => {
 
   return (
     <div id="Objectifs">
+      <h1>MY OBJECTIVES </h1>
       <ul>
         {objectifs.map((objectif) => (
           <li className="Card" key={objectif.id}>

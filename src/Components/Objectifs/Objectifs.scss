@@ -1,9 +1,15 @@
 #Objectifs {
     position: relative;
     min-height: 100vh;
+    row-gap: 45px;
 
     .Card {
         width: 600px;
-        height: 80px;
+        height: 60px;
+        list-style-type: none;
+        box-shadow: 0px 0px 25px 0 #583e81, 6px 6px 25px 0 rgba(129, 77, 188, 0.2);
+        margin-bottom: 45px;
+        display: flex;
+        align-items: center;
     }
 }

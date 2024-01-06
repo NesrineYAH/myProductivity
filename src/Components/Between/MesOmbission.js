@@ -4,7 +4,6 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import ProjectProgress from "../ProjectProgress/ProjectProgress";
 import { projectsData } from "../../data/projects";
 
-
 const Task = ({ task, onTaskToggle }) => {
   return (
     <div className="mes_Tasks">

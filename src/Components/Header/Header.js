@@ -14,7 +14,7 @@ const Header = () => {
   });
   return (
     <div className="Header">
-      <nav>
+      <nav className="Header__nav">
         <ul>
           <a href={`../Objectifs/#Objectifs`}>
             <li className="Header__list">Objectifs</li>
