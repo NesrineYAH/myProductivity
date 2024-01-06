@@ -17,20 +17,19 @@ const Objectifs = () => {
           : objectif
       )
     );
-    console.log(Objectifs);
   };
+
   return (
-    <div id="Objectifs">
+    <div id="objectifs">
       <ul>
         {objectifs.map((objectif) => (
-          <li className="list" key={objectifs.id}>
-            {objectifs.title}
+          <li className="ObjectifCard" key={objectif.id}>
             <input
               type="checkbox"
               checked={objectif.completed}
-              onChange={() => handleToggle(objectifs.id)}
+              onChange={() => handleToggle(objectif.id)}
             />
-            <label className="objecTtile">{objectifs.title}</label>
+            <label className="objecTtile">{objectif.title}</label>
           </li>
         ))}
       </ul>

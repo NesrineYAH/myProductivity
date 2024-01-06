@@ -3,12 +3,8 @@ import ProgressBar from "./Components/ProgressBar/ProgressBar";
 import { useParams } from "react-router-dom";
 import { projectsData } from "./data/projects";
 import ProjectProgress from "./Components/ProjectProgress/ProjectProgress";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./Components/Header/Header";
-import Home from "./pages/Home/Home";
-import Objectifs from "./pages/Objectifs/Objectifs";
 
-import "./App.scss";
+
 
 const Task = ({ task, onTaskToggle }) => {
   return (
@@ -23,7 +19,7 @@ const Task = ({ task, onTaskToggle }) => {
   );
 };
 
-const App = () => {
+const MesOmbission = () => {
   const calculateProgress = () => {
     // Calculate progress based on completed tasks, for example
     const totalTasks = projectsData.reduce(
@@ -91,35 +87,25 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Objectifs" element={<Objectifs />} />
-        </Routes>
-
-        <div id="MeOMB">
-          <h1>MY WOKFLOW PRODUCTIVITY 2024 </h1>
-          <div className="current-date">{currentDate.toLocaleString()}</div>
-          <div className="project__Container">
-            {projects.map((project) => (
-              <div key={project.id} className="prodcutCard">
-                <ProjectProgress project={project} />
-                {project.tasks.map((task) => (
-                  <Task
-                    key={task.id}
-                    task={task}
-                    onTaskToggle={() => handleTaskToggle(project.id, task.id)}
-                  />
-                ))}
-              </div>
+    <div id="MeOMB">
+      <h1>MY WOKFLOW PRODUCTIVITY 2024 </h1>
+      <div className="current-date">{currentDate.toLocaleString()}</div>
+      <div className="project__Container">
+        {projects.map((project) => (
+          <div key={project.id} className="prodcutCard">
+            <ProjectProgress project={project} />
+            {project.tasks.map((task) => (
+              <Task
+                key={task.id}
+                task={task}
+                onTaskToggle={() => handleTaskToggle(project.id, task.id)}
+              />
             ))}
           </div>
-        </div>
-      </BrowserRouter>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default App;
+export default MesOmbission;
