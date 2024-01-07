@@ -38,7 +38,7 @@ const MesOmbission = () => {
   localStorage.setItem("isChecked", true);
 
   // Lors du chargement de la page
-  const isChecked = localStorage.getItem("isChecked") === "true";
+  // const isChecked = localStorage.getItem("isChecked") === "true";
 
   const handleTaskToggle = (projectId, taskId) => {
     setProjects((prevProjects) =>

@@ -6,7 +6,7 @@ import ProjectProgress from "./Components/ProjectProgress/ProjectProgress";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Home from "./pages/Home/Home";
-import Objectifs from "./Components/Objectifs/Objectifs";
+import ObjectifListe from "./Components/Objectifs/Objectifs";
 import "./App.scss";
 import MesOmbission from "./Components/Between/MesOmbission";
 
@@ -97,7 +97,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path={`../Objectifs/#Objectifs`} element={<Objectifs />} />
+          {/* <Route path={`../Objectifs/#Objectifs`} element={<Objectifs />} /> */}
         </Routes>
       </BrowserRouter>
       {/* 
@@ -120,7 +120,7 @@ const App = () => {
           </div>
         </div> */}
       <MesOmbission />
-      <Objectifs />
+      <ObjectifListe />
     </div>
   );
 };
