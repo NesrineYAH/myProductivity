@@ -2,88 +2,25 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Objectifs.scss";
 
-/*const Objectifs = () => {
-  const [objectifs, setObjectifs] = useState([
-    { id: 1, title: "English Speak", completed: false },
-    { id: 2, title: "English Writing", completed: false },
-  ]);
-  const handleToggle = (objectifId) => {
-    setObjectifs((prevObjectifs) =>
-      prevObjectifs.map((objectif) =>
-        objectif.id === objectifId
-          ? { ...objectif, completed: !objectif.completed }
-          : objectif
-      )
-    );
-  };
-
-  useEffect(() => {
-    // Lorsque l'état change
-    localStorage.setItem("objectifs", JSON.stringify(objectifs));
-  }, [objectifs]);
-
-  useEffect(() => {
-    // Lors du chargement de la page
-    const storedObjectifs = JSON.parse(localStorage.getItem("objectifs")) || [];
-    if (storedObjectifs) {
-      setObjectifs(storedObjectifs);
-    }
-  }, []);
-  // Fonction pour gérer le changement d'état d'une case à cocher
-  const handleCheckboxChange = (index) => {
-    const updatedObjectifs = [...objectifs];
-    updatedObjectifs[index].checked = !updatedObjectifs[index].checked;
-    setObjectifs(updatedObjectifs);
-  };
-
-  return (
-    <div id="Objectifs">
-      <h1>MY OB   <div id="Objectifs">JECTIVES </h1>
-      <ul>
-        {objectifs.map((objectif) => (
-          <li className="Card" key={objectif.id}>
-            <input
-              type="checkbox"
-              checked={objectif.completed}
-              onChange={() => handleToggle(objectif.id)}
-            />
-            <label className="objectTitle">{objectif.title}</label>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-export default Objectifs;
-*/
-
 const ObjectifListe = () => {
   // Utilisez le localStorage pour stocker et récupérer les données
   const localStorageKey = "objectifs";
   // Définissez des objectifs initiaux si le localStorage est vide
   const objectifsInitiaux = [
     {
-      title: "Provement to Manel",
+      title: "Apprendre bien le javaScript",
       checked: false,
     },
     {
-      title: "Buy a house",
+      title: "Apprendre Python",
       checked: false,
     },
     {
-      title: "buy a car",
+      title: "Apprendre Angluar",
       checked: false,
     },
     {
       title: "speak english fluently",
-      checked: false,
-    },
-    {
-      title: "Find a work",
-      checked: false,
-    },
-    {
-      title: "Going to omra ",
       checked: false,
     },
   ];
