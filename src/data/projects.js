@@ -60,7 +60,7 @@ export const projectsData = [
     ],
   },
   {
-    name: "p avec react ",
+    name: "SportSee ",
     image: "",
     alt: "p avec react",
     id: "3",
@@ -172,6 +172,36 @@ export const projectsData = [
         completed: false,
         startDate: "2024-02-11",
         endDate: "2024-02-18",
+      },
+    ],
+  },
+  {
+    name: "d'autres Taches ",
+    image: "",
+    alt: "",
+    id: "7",
+    tasks: [
+      {
+        id: 1,
+        title: "finir Notion ",
+        completed: false,
+        startDate: "2024-01",
+        endDate: "2024-01",
+      },
+      {
+        id: 2,
+        title: "finir les cours OPC",
+        completed: false,
+        startDate: "2024-01",
+        endDate: "2024-01",
+      },
+
+      {
+        id: 4,
+        title: "le cours SCRUM",
+        completed: false,
+        startDate: "2024-01",
+        endDate: "2024-01",
       },
     ],
   },
