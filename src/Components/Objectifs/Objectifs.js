@@ -3,12 +3,15 @@ import { useParams } from "react-router-dom";
 import "./Objectifs.scss";
 
 const ObjectifListe = () => {
-  // Utilisez le localStorage pour stocker et récupérer les données
   const localStorageKey = "objectifs";
-  // Définissez des objectifs initiaux si le localStorage est vide
+  // Liste initiale des objectifs
   const objectifsInitiaux = [
     {
-      title: "Apprendre bien le javaScript",
+      title: "Apprendre le javaScript",
+      checked: false,
+    },
+    {
+      title: "Apprendre JAVA",
       checked: false,
     },
     {
@@ -25,11 +28,20 @@ const ObjectifListe = () => {
     },
   ];
 
-  const savedObjectifs =
-    JSON.parse(localStorage.getItem(localStorageKey)) || objectifsInitiaux;
+  const loadObjectifsFromLocalStorage = () => {
+    try {
+      const savedObjectifs = JSON.parse(localStorage.getItem(localStorageKey));
+      if (savedObjectifs && Array.isArray(savedObjectifs)) {
+        return savedObjectifs;
+      }
+    } catch (e) {
+      console.error("Erreur lors du chargement des objectifs :", e);
+    }
+    return objectifsInitiaux; // Retourne les objectifs par défaut si une erreur se produit
+  };
 
   // État local pour les objectifs
-  const [objectifs, setObjectifs] = useState(savedObjectifs);
+  const [objectifs, setObjectifs] = useState(loadObjectifsFromLocalStorage);
 
   // Effet de mise à jour du localStorage chaque fois que les objectifs changent
   useEffect(() => {
@@ -38,8 +50,9 @@ const ObjectifListe = () => {
 
   // Fonction pour gérer le changement d'état d'une case à cocher
   const handleCheckboxChange = (index) => {
-    const updatedObjectifs = [...objectifs];
-    updatedObjectifs[index].checked = !updatedObjectifs[index].checked;
+    const updatedObjectifs = objectifs.map((objectif, i) =>
+      i === index ? { ...objectif, checked: !objectif.checked } : objectif
+    );
     setObjectifs(updatedObjectifs);
   };
 
@@ -49,12 +62,14 @@ const ObjectifListe = () => {
       <ul>
         {objectifs.map((objectif, index) => (
           <li key={index} className="Card">
-            <input
-              type="checkbox"
-              checked={objectif.checked || false}
-              onChange={() => handleCheckboxChange(index)}
-            />
-            {objectif.title}
+            <label>
+              <input
+                type="checkbox"
+                checked={objectif.checked} // checked={objectif.checked || false}
+                onChange={() => handleCheckboxChange(index)}
+              />
+              {objectif.title}
+            </label>
           </li>
         ))}
       </ul>

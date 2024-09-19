@@ -2,42 +2,38 @@
 import React, { useState } from "react";
 
 const Task = ({ task, onToggle }) => {
-    const [tasks, setTasks] = useState([
-       { id: 1, title: "Task 1", completed: false },
-       { id: 2, title: "Task 2", completed: true },
-       // Add more tasks as needed
-     ]);
-     const handleToggle = (taskId) => {
-       setTasks((prevTasks) =>
-         prevTasks.map((task) =>
-           task.id === taskId ? { ...task, completed: !task.completed } : task
-         )
-       );
-     };
-
-     return (
-       <div>
-         <input type="checkbox" checked={task.completed} onToggle={handleToggle} />
-         <label>{task.title}</label>
-      </div>
-     );
-
-  const Task = ({ task, onTaskToggle }) => {
-    return (
-      <div className="mes_Tasks">
-        <input
-          type="checkbox"
-          checked={task.completed}
-          onChange={onTaskToggle}
-        />
-        <label className="taksTile">{task.title}</label>
-        <div className="task-dates">
-          <span className="date"> Start Date: {task.startDate}</span>
-          <span className="date">End Date: {task.endDate}</span>
-        </div>
-      </div>
+  const [tasks, setTasks] = useState([
+    { id: 1, title: "Task 1", completed: false },
+    { id: 2, title: "Task 2", completed: true },
+    // Add more tasks as needed
+  ]);
+  const handleToggle = (taskId) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId ? { ...task, completed: !task.completed } : task
+      )
     );
   };
+
+  return (
+    <div>
+      <input type="checkbox" checked={task.completed} onToggle={handleToggle} />
+      <label>{task.title}</label>
+    </div>
+  );
+
+
+
+
+
+
+
+
+
+
+
+
+
 };
 
 export default Task;
