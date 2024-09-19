@@ -28,7 +28,6 @@ const ProjectProgress = ({ project }) => {
 export default ProjectProgress;
 
 /**
- 
   const Task = ({ task, onTaskToggle }) => {
     return (
       <div className="mes_Tasks">

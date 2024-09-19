@@ -10,11 +10,12 @@ export const projectsData = [
       {
         id: 1,
         title: "page html:",
+        description: "ctte page est une page",
         completed: false,
       },
       {
         id: 2,
-        title: "index,templating:",
+        title: "templating:",
         completed: false,
       },
       {

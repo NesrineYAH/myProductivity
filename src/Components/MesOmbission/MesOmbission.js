@@ -8,11 +8,25 @@ const Task = ({ task, onTaskToggle }) => {
   return (
     <div className="mes_Tasks">
       <input type="checkbox" checked={task.completed} onChange={onTaskToggle} />
-      <label className="taksTile">{task.title}</label>
-      <div className="task-dates">
+      <label className="taksTile">
+        {task.title}
+        <p
+          style={{
+            fontSize: "14px",
+            color: "#000",
+            display: "block",
+            height: "15px",
+            position: "relative",
+            width: "100%",
+          }}
+        >
+          {task.description}
+        </p>
+      </label>
+      {/* <div className="task-dates">
         <span className="date"> Start Date: {task.startDate}</span>
         <span className="date">End Date: {task.endDate}</span>
-      </div>
+      </div> */}
     </div>
   );
 };
