@@ -132,32 +132,42 @@ export const projectsData = [
         title: "Plan du site",
         completed: false,
       },
+      {
+        id: 5,
+        title: "Publication du site",
+        completed: false,
+      },
     ],
   },
   {
-    name: "Héberger-moi ",
+    name: "Fisheye ",
     image: "",
     alt: "projet HM",
     id: "6",
     tasks: [
       {
         id: 1,
-        title: "  Redux :",
+        title: "page html:",
         completed: false,
       },
       {
         id: 2,
-        title: "excRedux :",
+        title: "script I:",
         completed: false,
       },
       {
         id: 3,
-        title: "Document",
+        title: "script II:",
         completed: false,
       },
       {
         id: 4,
-        title: "Media Query",
+        title: "script III:",
+        completed: false,
+      },
+      {
+        id: 5,
+        title: "script IIII:",
         completed: false,
       },
     ],

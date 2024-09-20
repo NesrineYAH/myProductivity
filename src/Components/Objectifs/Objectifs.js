@@ -15,6 +15,11 @@ const ObjectifListe = () => {
       checked: false,
     },
     {
+      title: "Apprendre TypeScript",
+      checked: false,
+    },
+
+    {
       title: "Apprendre Python",
       checked: false,
     },

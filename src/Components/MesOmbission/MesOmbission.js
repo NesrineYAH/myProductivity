@@ -15,35 +15,19 @@ const Task = ({ task, onTaskToggle }) => {
             fontSize: "14px",
             color: "#000",
             display: "block",
-            height: "15px",
             position: "relative",
-            width: "100%",
           }}
         >
           {task.description}
         </p>
       </label>
-      {/* <div className="task-dates">
-        <span className="date"> Start Date: {task.startDate}</span>
-        <span className="date">End Date: {task.endDate}</span>
-      </div> */}
     </div>
   );
 };
 
 const MesOmbission = () => {
-  const calculateProgress = () => {
-    // Calculate progress based on completed tasks, for example
-    const totalTasks = projectsData.reduce(
-      (acc, project) => acc + project.tasks.length,
-      0
-    );
-    const completedTasks = projectsData.reduce((acc, project) => {
-      return acc + project.tasks.filter((task) => task.completed).length;
-    }, 0);
-    return (completedTasks / totalTasks) * 100;
-  };
-  const progress = calculateProgress();
+  const [progress, setProgress] = useState(0);
+  //const progress = calculateProgress();
   const { id } = useParams();
   const [error, setError] = useState(false);
   const [projects, setProjects] = useState(projectsData);
@@ -78,6 +62,20 @@ const MesOmbission = () => {
   };
 
   useEffect(() => {
+    const calculateProgress = () => {
+      const totalTasks = projects.reduce(
+        (acc, project) => acc + project.tasks.length,
+        0
+      );
+      const completedTasks = projects.reduce((acc, project) => {
+        return acc + project.tasks.filter((task) => task.completed).length;
+      }, 0);
+      return (completedTasks / totalTasks) * 100;
+    };
+    setProgress(calculateProgress()); // Set progress whenever projects change
+  }, [projects]);
+
+  useEffect(() => {
     // Load tasks from localStorage on component mount
     const updatedProjects = projects.map((project) => ({
       ...project,
@@ -86,7 +84,7 @@ const MesOmbission = () => {
         project.tasks,
     }));
     setProjects(updatedProjects);
-  });
+  }, []);
 
   const [currentDate, setCurrentDate] = useState(new Date());
   useEffect(() => {
