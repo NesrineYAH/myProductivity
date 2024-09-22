@@ -170,6 +170,11 @@ export const projectsData = [
         title: "Templates:",
         completed: false,
       },
+      {
+        id: 6,
+        title: "CSS:",
+        completed: false,
+      },
     ],
   },
   {
