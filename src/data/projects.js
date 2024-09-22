@@ -147,33 +147,33 @@ export const projectsData = [
     tasks: [
       {
         id: 1,
-        title: "page html:",
+        title: "html:",
         completed: false,
       },
       {
         id: 2,
-        title: "script I:",
+        title: "Api +Class:",
         completed: false,
       },
       {
         id: 3,
-        title: "script II:",
+        title: "Factories:",
         completed: false,
       },
       {
         id: 4,
-        title: "script III:",
+        title: "Functions:",
         completed: false,
       },
       {
         id: 5,
-        title: "script IIII:",
+        title: "Templates:",
         completed: false,
       },
     ],
   },
   {
-    name: "d'autres Taches ",
+    name: "D'autres Taches ",
     image: "",
     alt: "",
     id: "7",
