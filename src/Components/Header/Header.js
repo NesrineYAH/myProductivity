@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { useTypewriter, Cursor } from "react-simple-typewriter"; // Importer le composant correctement
 import "./Header.scss";
+import Jobs from "../../pages/Jobs/Jobs";
 
 const Header = () => {
   const [text] = useTypewriter({
@@ -21,6 +22,9 @@ const Header = () => {
           </a>
           <a href="/">
             <li className="Header__list">home</li>
+          </a>
+          <a href={`Jobs`}>
+            <li className="Header__list">Page de recherche</li>
           </a>
         </ul>
       </nav>

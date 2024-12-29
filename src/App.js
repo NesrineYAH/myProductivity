@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import ObjectifListe from "./Components/Objectifs/Objectifs";
 import "./App.scss";
 import MesOmbission from "./Components/MesOmbission/MesOmbission";
+import Jobs from "./pages/Jobs/Jobs";
 
 const App = () => {
   return (
@@ -15,10 +16,11 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path={`/Jobs`} element={<Jobs />} />
+
           {/* <Route path={`../Objectifs/#Objectifs`} element={<Objectifs />} /> */}
         </Routes>
       </BrowserRouter>
-
       <MesOmbission />
       <ObjectifListe />
     </div>
