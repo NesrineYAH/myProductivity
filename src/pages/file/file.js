@@ -1,30 +1,21 @@
-import React, { useState } from "react";
-import { tasks } from "../../data/dataJob";
+import React, { useState, useEffect } from "react";
+import { tasks as initialTasks } from "../../data/dataJob"; // Import des tâches depuis le fichier data.js
 
 function Job() {
-  const [task, setTask] = useState(""); // Pour capturer les nouvelles tâches
   const [tasks, setTasks] = useState([]); // Liste des tâches
   const [filter, setFilter] = useState("all"); // Filtrer les tâches (tout, complété, non complété)
 
-  // Fonction pour ajouter une nouvelle tâche
-  const addTask = () => {
-    if (task.trim()) {
-      setTasks([
-        ...tasks,
-        {
-          id: tasks.length + 1,
-          text: task,
-          completed: false,
-        },
-      ]);
-      setTask(""); // Réinitialise le champ de saisie
-    }
-  };
+  // Initialiser les tâches à partir de data.js au chargement du composant
+  useEffect(() => {
+    setTasks(initialTasks[0].tasks); // Nous supposons que vous voulez récupérer les tâches du premier projet (tasks[0].tasks)
+  }, []);
 
   // Fonction pour marquer une tâche comme terminée
   const toggleTaskCompletion = (id) => {
     setTasks(
-      tasks.map((t) => (t.id === id ? { ...t, completed: !t.completed } : t))
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
     );
   };
 
@@ -38,17 +29,6 @@ function Job() {
   return (
     <div id="job">
       <h1>Plan d'Action de Recherche d'Emploi</h1>
-
-      {/* Formulaire pour ajouter une tâche */}
-      <div>
-        <input
-          type="text"
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
-          placeholder="Ajoutez une nouvelle tâche..."
-        />
-        <button onClick={addTask}>Ajouter</button>
-      </div>
 
       {/* Filtrage des tâches */}
       <div>
@@ -66,7 +46,7 @@ function Job() {
               textDecoration: task.completed ? "line-through" : "none",
             }}
           >
-            <span>{task.text}</span>
+            <span>{task.title}</span>
             <button onClick={() => toggleTaskCompletion(task.id)}>
               {task.completed
                 ? "Marquer comme non complété"
