@@ -1,0 +1,96 @@
+/* Page jobs.jsx*/
+#job {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    flex: 1;
+    background-color: #f4f0f0;
+
+
+    button {
+        padding: 8px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li button {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    li button:hover {
+        background-color: #d32f2f;
+    }
+
+    #Bouttons {
+        margin-right: -50px;
+    }
+
+    input {
+        height: 30px;
+        padding: 4px;
+    }
+
+    /* Style pour le modal */
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        /* Assure que le modal reste au-dessus des autres éléments */
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 300px;
+        text-align: center;
+        height: 500px;
+        width: 500px;
+    }
+
+    .close {
+        position: relative;
+        top: 10px;
+        right: 2%;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .block {
+        width: 90%;
+        height: 150px;
+        border: 1px #a4141400 solid;
+    }
+}
