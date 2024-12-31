@@ -6,7 +6,7 @@
     position: relative;
     flex: 1;
     background-color: #f4f0f0;
-
+    width: 100%;
 
     button {
         padding: 8px 15px;
@@ -51,8 +51,11 @@
     }
 
     input {
-        height: 30px;
+        height: 50px;
         padding: 4px;
+        width: 220px;
+        overflow: hidden;
+
     }
 
     /* Style pour le modal */

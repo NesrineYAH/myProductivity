@@ -95,8 +95,9 @@ function Job() {
       <div>
         {filteredTasks.map((task) => (
           <div>
-            <h3>{task.text}</h3>
+            {/* <h3>{task.text}</h3> */}
             <input
+              type="text"
               placeholder="Name"
               key={task.id}
               style={{
@@ -104,6 +105,7 @@ function Job() {
               }}
               onClick={() => handlechecking(task.id)} // Ajout du onClick ici
             />
+
             <input type="text" placeholder="Tache" />
             <input type="text" placeholder="statut" />
             <input type="text" placeholder="Remarque" onClick={openModal} />
