@@ -23,16 +23,6 @@ export const tasks = [
         title: "Relance",
         completed: false,
       },
-      {
-        id: 4,
-        title: ":",
-        completed: false,
-      },
-      {
-        id: 5,
-        title: ":",
-        completed: false,
-      },
     ],
   },
 ];

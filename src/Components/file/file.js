@@ -55,6 +55,20 @@ function JobTasks() {
           </li>
         ))}
       </ul>
+      <div id="LINKS">
+        <h2>Quelques liens tres importants</h2>
+
+        <a
+          href="https://dauphine.psl.eu/vie-de-campus/incubateur"
+          className="Header__list"
+        >
+          <h3>Incubateur de l'Université Paris Dauphine-PSL</h3>
+        </a>
+        <p>
+          Accompagner les porteurs de projets dans le développement de leur
+          start-up.
+        </p>
+      </div>
     </div>
   );
 }
