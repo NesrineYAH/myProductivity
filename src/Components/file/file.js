@@ -68,6 +68,10 @@ function JobTasks() {
           Accompagner les porteurs de projets dans le développement de leur
           start-up.
         </p>
+        <a href="https://www.random-coffee.com/fr/carrieres">
+          <h3>Rondomcofee</h3>
+        </a>
+        <p></p>
       </div>
     </div>
   );
