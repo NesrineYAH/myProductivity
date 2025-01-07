@@ -20,7 +20,7 @@ export const projectsData = [
       },
       {
         id: 3,
-        title: "btn, filter",
+        title: "Bouttons",
         completed: false,
       },
       {
@@ -96,18 +96,18 @@ export const projectsData = [
     tasks: [
       {
         id: 1,
-        title: "  Python :",
+        title: "Page principal :",
         completed: false,
       },
       {
         id: 2,
-        title: " excPython :",
+        title: " Modal contact:",
         completed: false,
       },
     ],
   },
   {
-    name: "mon portfolio ",
+    name: "Mon portfolio ",
     image: "",
     alt: "",
     id: "5",
@@ -119,12 +119,12 @@ export const projectsData = [
       },
       {
         id: 2,
-        title: "nom domain",
+        title: "Nom domain",
         completed: false,
       },
       {
         id: 3,
-        title: "mention légales",
+        title: "Mention légales",
         completed: false,
       },
       {
@@ -178,29 +178,71 @@ export const projectsData = [
     ],
   },
   {
-    name: "D'autres Taches ",
+    name: "SaaS RH",
     image: "",
     alt: "",
     id: "7",
     tasks: [
       {
         id: 1,
-        title: "finir Notion ",
+        title: "Apprentissage Cours",
         completed: false,
         startDate: "2024-01",
         endDate: "2024-01",
       },
       {
         id: 2,
-        title: "finir les cours OPC",
+        title: "Installation de porjet",
         completed: false,
         startDate: "2024-01",
         endDate: "2024-01",
       },
-
+      {
+        id: 3,
+        title: "Mise en application I",
+        completed: false,
+        startDate: "2024-01",
+        endDate: "2024-01",
+      },
       {
         id: 4,
-        title: "le cours SCRUM",
+        title: "Mise en application II",
+        completed: false,
+        startDate: "2024-01",
+        endDate: "2024-01",
+      },
+    ],
+  },
+  {
+    name: "Application MY_TASKS",
+    image: "",
+    alt: "",
+    id: "8",
+    tasks: [
+      {
+        id: 1,
+        title: "Apprentissage Cours",
+        completed: false,
+        startDate: "2024-01",
+        endDate: "2024-01",
+      },
+      {
+        id: 2,
+        title: "Installation de porjet",
+        completed: false,
+        startDate: "2024-01",
+        endDate: "2024-01",
+      },
+      {
+        id: 3,
+        title: "Mise en application I",
+        completed: false,
+        startDate: "2024-01",
+        endDate: "2024-01",
+      },
+      {
+        id: 4,
+        title: "Mise en application II",
         completed: false,
         startDate: "2024-01",
         endDate: "2024-01",
@@ -211,21 +253,20 @@ export const projectsData = [
     name: "Cours d'apprentiisage ",
     image: "",
     alt: "",
-    id: "8",
+    id: "9",
     tasks: [
       {
         id: 1,
-        title: " Mooc Cours Python",
+        title: " OPC Cours ANGULAR",
         completed: false,
       },
       {
         id: 2,
-        title: "finir le cours JAVA",
+        title: "finir le cours JEST",
         completed: false,
       },
-
       {
-        id: 4,
+        id: 3,
         title: "le cours SCRUM",
         completed: false,
       },
